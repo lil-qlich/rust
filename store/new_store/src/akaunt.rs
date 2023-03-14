@@ -11,6 +11,7 @@ let entrance:String = entrance.trim().parse().unwrap();
 if entrance == "Blesk" {
 println!("Welcome, {}", admin1.name);
 println!("huo");
+println!("да")
 }
 else if entrance == "Sajaba" {
 println!("Welcome, {}", admin2.name);
