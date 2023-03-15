@@ -67,7 +67,7 @@ fn main() {
     let korzina: Vec<String> = vec![];
     let mut ask_choice = String::new();
     io::stdin().read_line(&mut ask_choice).unwrap();
-    check_choise(shop_balance, spisok2, buy, prices, spisok, quantitys, korzina);
+    check_choise(shop_balance, spisok2, buy, prices, spisok, quantitys, korzina.clone());
         let i1 = 1;
         if i1 == 1{
             exit(new_client1, new_admin, new_admin2, new_client2, new_client3, new_client4, new_client5, korzina);

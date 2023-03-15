@@ -9,10 +9,10 @@ io::stdin().read_line(&mut entrance).unwrap();
 let entrance:String = entrance.trim().parse().unwrap();
 // запрос строки
 if entrance == "Blesk" {
-println!("Welcome, {}", admin1.name);
+println!("Welcome, {}", admin1);
 println!("huo");
 println!("да");
-println("Проверка");
+println!("Проверка");
 }
 else if entrance == "Sajaba" {
 println!("Welcome, {}", admin2);
