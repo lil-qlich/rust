@@ -10,9 +10,7 @@ let entrance:String = entrance.trim().parse().unwrap();
 // запрос строки
 if entrance == "Blesk" {
 println!("Welcome, {}", admin1);
-println!("huo");
-println!("да");
-println!("Проверка");
+println!("Вам доступны следующие функции: \n Просмотр товаров: Просмотр \n Просмотр вашей корзины: Корзина \n Пополнить и просмотреть ваш баланс: Баланс \n Перейти к оформлению заказа: Заказать \n Удаление товаров из корзины: Редактор корзины - \n Добавление товара в каталог и изменение количества товара: Редактор корзины + \n Удаление товара из каталога: Редактор каталога \n Изменить цену товара: Редактор цен \n Помощь по магазину \n Exit - выход ");
 }
 else if entrance == "Sajaba" {
 println!("Welcome, {}", admin2);
@@ -61,12 +59,43 @@ return entrance(entrance1, admin1, admin2, client2, client3, client4, client5);
 }
 }
 pub fn psih_help(){
-    println!("Мы не удивлены, что вы обратились за помощью к нашему психологу. Оцените своё состаяние от ");
     let mut psihh = String::new();
     io::stdin().read_line(&mut psihh).unwrap();
-    while psihh.trim() != "Псих.помощь" {
-        if psihh.trim() == "Плохо" {
-
+    while psihh.trim() != "Спасибо" {
+        println!("Нам очень жаль, что вам пришлось обратиться за помощью к психологу. Оцените своё состаяние от 1 до 10, где 1-это очень плохо, а 10-это очень хорошо.");
+        if psihh.trim() == "1" {
+        println!("Ваше состояние говорит о том томтом");
+        }
+        else if psihh.trim() == "2" {
+            println!("Ваше состояние говорит о том томтом");
+        }
+        else if psihh.trim() == "3" {
+            println!("Ваше состояние говорит о том томтом");
+        }
+        else if psihh.trim() == "4" {
+            println!("Ваше состояние говорит о том томтом");
+        }
+        else if psihh.trim() == "5" {
+            println!("");
+        }
+        else if psihh.trim() == "6" {
+            println!("");
+        }
+        else if psihh.trim() == "7" {
+            println!("");
+        }
+        else if psihh.trim() == "8" {
+            println!("");
+        }
+        else if psihh.trim() == "9" {
+            println!("");
+        }
+        else if psihh.trim() == "10" {
+            println!("");
+        }
+        else {
+            println!("Нам очень жаль, но здесь даже мы бессильны... Извините, прощайте, с уважением, команда AQ!");
+            break;
         }
     }
 }
