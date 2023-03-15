@@ -1,8 +1,8 @@
 use crate::{Admin, Client};
 use std::io;
 use crate::check_choise;
-pub fn entrance(entrance1:String, admin1: Admin, admin2: Admin, client2: Client, client3: Client,
-client4: Client, client5: Client){
+pub fn entrance(entrance1:String, admin1: String, admin2:  String, client2: String, client3: String,
+client4: String, client5: String){
 println!("What is your name?");
 let mut entrance: String = String::new();
 io::stdin().read_line(&mut entrance).unwrap();
@@ -10,26 +10,28 @@ let entrance:String = entrance.trim().parse().unwrap();
 // запрос строки
 if entrance == "Blesk" {
 println!("Welcome, {}", admin1.name);
-println!("Вам доступны следующие функции: \n Просмотр товаров: Просмотр \n Просмотр вашей корзины: Корзина \n Пополнить и просмотреть ваш баланс: Баланс \n Перейти к оформлению заказа: Заказать \n Удаление товаров из корзины: Редактор корзины - \n Добавление товара в каталог и изменение количества товара: Редактор корзины + \n Удаление товара из каталога: Редактор каталога \n Изменить цену товара: Редактор цен \n Помощь по магазину \n Exit - выход ");
+println!("huo");
+println!("да");
+println("Проверка");
 }
 else if entrance == "Sajaba" {
-println!("Welcome, {}", admin2.name);
+println!("Welcome, {}", admin2);
 println!("Вам доступны следующие функции: \n Просмотр товаров: Просмотр \n Просмотр вашей корзины: Корзина \n Пополнить и просмотреть ваш баланс: Баланс \n Перейти к оформлению заказа: Заказать \n Удаление товаров из корзины: Редактор корзины - \n Добавление товара в каталог и изменение количества товара: Редактор корзины + \n Удаление товара из каталога: Редактор каталога \n Изменить цену товара: Редактор цен \n Помощь по магазину \n Exit - выход ");
 }
 else if entrance == "Timur" {
-println!("Welcome, {}", client2.name);
+println!("Welcome, {}", client2);
 println!("Вам доступны следующие функции: \n Просмотр товаров: Просмотр \n Просмотр вашей корзины: Корзина \n Пополнить и просмотреть ваш баланс: Баланс \n Перейти к оформлению заказа: Заказать \n Удаление товаров из корзины: Редактор корзины \n Помощь по магазину \n Exit - выход ");
 }
 else if entrance == "Max" {
-println!("Welcome, {}", client3.name);
+println!("Welcome, {}", client3);
 println!("Вам доступны следующие функции: \n Просмотр товаров: Просмотр \n Просмотр вашей корзины: Корзина \n Пополнить и просмотреть ваш баланс: Баланс \n Перейти к оформлению заказа: Заказать \n Удаление товаров из корзины: Редактор корзины  \n Помощь по магазину \n Exit - выход ");
 }
 else if entrance == "Artem" {
-println!("Welcome, {}", client4.name);
-println!("Вам доступны следующие функции: \n Просмотр товаров: Просмотр \n Просмотр вашей корзины: Корзина \n Пополнить и просмотреть ваш баланс: Баланс \n Перейти к оформлению заказа: Заказать \n Удаление товаров из корзины: Редактор корзины \n Exit - выход ");
+println!("Welcome, {}", client4);
+println!("попа Вам доступны следующие функции: \n Просмотр товаров: Просмотр \n Просмотр вашей корзины: Корзина \n Пополнить и просмотреть ваш баланс: Баланс \n Перейти к оформлению заказа: Заказать \n Удаление товаров из корзины: Редактор корзины \n Exit - выход ");
 }
 else if entrance == "DeadInside" {
-println!("Welcome, {}", client5.name);
+println!("Welcome, {}", client5);
 println!("Вам доступны следующие функции: \n Просмотр товаров: Просмотр \n Просмотр вашей корзины: Корзина \n Пополнить и просмотреть ваш баланс: Баланс \n Перейти к оформлению заказа: Заказать \n Удаление товаров из корзины: Редактор корзины - \n Если же Вам нужна будет психологическая помощь наших операторов, то напишите: Псих.помощь \n Exit - выход ");
 }
 
@@ -47,13 +49,15 @@ println!("Ваш баланс равен: {}", new_balance);
 }
 }
 
-pub fn exit(){
+pub fn exit(entrance1:String, admin1: String, admin2: String, client2: String, client3: String,
+    client4: String, client5: String, korzina:Vec<String>){
 let mut exit: String = String::new();
 io::stdin().read_line(&mut exit).unwrap();
 let exit:String = exit.trim().parse().unwrap();
 
 if exit == "Exit" {
 println!("До свидания, с уважением!");
+return entrance(entrance1, admin1, admin2, client2, client3, client4, client5);
 }
 }
 pub fn psih_help(){

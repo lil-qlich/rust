@@ -35,9 +35,16 @@ fn main() {
     let client3 = Client{name:"Max".to_string(), balance: 0};
     let client4 = Client{name:"Artem".to_string(), balance: 0};
     let client5 = Client{name:"DeadInside".to_string(), balance: 0};
+    let new_client1 = client1.name;
+    let new_client2 = client2.name;
+    let new_client3 = client3.name;
+    let new_client4 = client4.name;
+    let new_client5 = client5.name;
+    let new_admin = admin1.name;
+    let new_admin2 = admin2.name;
         let i = 1;
         if i == 1{
-            entrance(client1.name, admin1, admin2, client2, client3, client4, client5);
+            entrance(new_client1.clone(), new_admin.clone(), new_admin2.clone(), new_client2.clone(), new_client3.clone(), new_client4.clone(), new_client5.clone());
         }   
     let product1 = Product{name:"Апельсины".to_string(), price: 60, quantity: 20};
     let product2 = Product{name:"Дмитрий Ножкин".to_string(), price: 10000000, quantity: 99};
@@ -63,7 +70,7 @@ fn main() {
     check_choise(shop_balance, spisok2, buy, prices, spisok, quantitys, korzina);
         let i1 = 1;
         if i1 == 1{
-            exit();
+            exit(new_client1, new_admin, new_admin2, new_client2, new_client3, new_client4, new_client5, korzina);
         }    
 }
 pub fn check_choise( shop_balance:u64, spisok2:Vec<String>, buy:Vec<String>, prices:Vec<u64>, spisok:Vec<String>, quantitys:Vec<u64>, korzina:Vec<String>){
@@ -117,7 +124,6 @@ pub fn check_choise( shop_balance:u64, spisok2:Vec<String>, buy:Vec<String>, pri
     }
     else {
         println!("Повторите попытку");
-        break;
     }
 }
 }
