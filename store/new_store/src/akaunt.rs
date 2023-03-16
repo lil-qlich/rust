@@ -60,44 +60,56 @@ return entrance(entrance1, admin1, admin2, client2, client3, client4, client5);
 }
 }
 pub fn psih_help(){
+    println!("Нам очень жаль, что вам пришлось обратиться за помощью к психологу. Оцените своё состаяние от 1 до 10, где 1-это очень плохо, а 10-это очень хорошо.  ");
     let mut psihh = String::new();
     io::stdin().read_line(&mut psihh).unwrap();
     while psihh.trim() != "Спасибо" {
-        println!("Нам очень жаль, что вам пришлось обратиться за помощью к психологу. Оцените своё состаяние от 1 до 10, где 1-это очень плохо, а 10-это очень хорошо.");
         if psihh.trim() == "1" {
-        println!("Ваше состояние говорит о том томтом");
-        }
+            println!("Ваше состояние говорит о том, что все очень печально. НО ЗАТО, вы уже на самом дне, хуже не будет! Дальнейший путь только вперед, если вы это конечно хотите! Будьте здоровы и любите маму!");
+            return check_choise(shop_balance, spisok2, buy, prices, spisok, quantitys, korzina);
+        }  
         else if psihh.trim() == "2" {
-            println!("Ваше состояние говорит о том томтом");
+            println!("Ваше состояние говорит о том, что вы не на самом дне, и если постараться, вы сможете изменить свою жизнь, главное верить в себя и свои силы. Также не мало важно позволять себе отдыхать и ошибаться.");
+            return check_choise(shop_balance, spisok2, buy, prices, spisok, quantitys, korzina);
         }
         else if psihh.trim() == "3" {
-            println!("Ваше состояние говорит о том томтом");
+            println!("Ваше состояние говорит о том, что вы не на самом дне, и если постараться, вы сможете изменить свою жизнь, главное верить в себя и свои силы. Также не мало важно позволять себе отдыхать и ошибаться.");
+            return check_choise(shop_balance, spisok2, buy, prices, spisok, quantitys, korzina);
         }
         else if psihh.trim() == "4" {
-            println!("Ваше состояние говорит о том томтом");
+            println!("Ваше состояние говорит о том, что все не так плохо, и если постараться, вы сможете изменить свою жизнь, главное верить в себя и свои силы. Также не мало важно позволять себе отдыхать и ошибаться.");
+            return check_choise(shop_balance, spisok2, buy, prices, spisok, quantitys, korzina);
         }
         else if psihh.trim() == "5" {
-            println!("");
+            println!("Ваше состояние является среднем, это неплохо. Возможно для полного счастья и умиротворения вам не хватает отдыха или новых эмоций, пробуйте!");
+            return check_choise(shop_balance, spisok2, buy, prices, spisok, quantitys, korzina);
         }
         else if psihh.trim() == "6" {
-            println!("");
+            println!("Возможно для полного счастья и умиротворения вам не хватает отдыха или новых эмоций, пробуйте!");
+            return check_choise(shop_balance, spisok2, buy, prices, spisok, quantitys, korzina);
         }
         else if psihh.trim() == "7" {
-            println!("");
+            println!("Возможно для полного счастья и умиротворения вам не хватает отдыха или новых эмоций, пробуйте!");
+            return check_choise(shop_balance, spisok2, buy, prices, spisok, quantitys, korzina);
         }
         else if psihh.trim() == "8" {
-            println!("");
+            println!("Это крутой результат, все понятно, обратились к нам, чтобы похвастаться, кек! Мы за вас рады!");
+            return check_choise(shop_balance, spisok2, buy, prices, spisok, quantitys, korzina);
         }
         else if psihh.trim() == "9" {
-            println!("");
+            println!("Это крутой результат, все понятно, обратились к нам, чтобы похвастаться, кек! Мы за вас рады!");
+            return check_choise(shop_balance, spisok2, buy, prices, spisok, quantitys, korzina);
         }
         else if psihh.trim() == "10" {
-            println!("");
+            println!("Честно, наша команда вам даже завидует ахахха) А вообще, это очень здорово!)");
+            check_choise(shop_balance, spisok2, buy, prices, spisok, quantitys, korzina)
         }
         else {
             println!("Нам очень жаль, но здесь даже мы бессильны... Извините, прощайте, с уважением, команда AQ!");
             break;
+        
         }
+        // break;
     }
 }
 pub fn shop_help(buy:Vec<String>, shop_balance:u64, spisok2:Vec<String>, prices:Vec<u64>,spisok:Vec<String>,quantitys:Vec<u64>, korzina:Vec<String>){
