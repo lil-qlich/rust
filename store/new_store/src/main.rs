@@ -15,6 +15,7 @@ use akaunt::entrance;
 use akaunt::exit;
 mod order;
 use crate::akaunt::balance;
+//Привет
 pub struct Admin{
     pub name: String,
     pub balance: u16,
