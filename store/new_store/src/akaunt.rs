@@ -119,3 +119,6 @@ pub fn shop_help(buy:Vec<String>, shop_balance:u64, spisok2:Vec<String>, prices:
         return check_choise(shop_balance, spisok2, buy, prices, spisok, quantitys, korzina);
     }
 }
+pub fn registr(){
+    println!("Введите ")
+}
