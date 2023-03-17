@@ -2,7 +2,7 @@ use crate::{Admin, Client};
 use std::io;
 use std::fs::File;
 use std::io::{Write, BufReader, BufRead, Error};
-use std::{fs::{File, OpenOptions}, io::{Write, stdin, Read}};
+use std::{fs::{OpenOptions}, io::{stdin, Read}};
 use std::os::windows::prelude::FileExt;
 use crate::check_choise;
 
@@ -140,5 +140,7 @@ pub fn reg(){
     println!("Приветсвуем с уважением в нашем магазине! Введите логин вашего аккаунта");
     let mut new_login = String::new();
     io::stdin().read_line(&mut new_login);
-    let logins = "account.txt"
+    let mut logins = "account.txt";
+    let opens = File::open(logins);
+    
 }

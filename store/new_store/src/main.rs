@@ -1,12 +1,11 @@
 mod sclad;
+use crate::akaunt::reg;
 use std::vec;
-use akaunt::psih_help;
 use akaunt::shop_help;
 use buy_products::buy_product;
 use buy_products::delete_products;
 use buy_products::edit_catalog;
 use order::add_order;
-use akaunt::registr;
 use crate::buy_products::delete_product;
 use sclad::Product;
 mod buy_products;
@@ -69,6 +68,7 @@ fn main() {
     let korzina: Vec<String> = vec![];
     let mut ask_choice = String::new();
     io::stdin().read_line(&mut ask_choice).unwrap();
+    reg();
     check_choise(shop_balance, spisok2, buy, prices, spisok, quantitys, korzina.clone());
         let i1 = 1;
         if i1 == 1{
@@ -119,7 +119,7 @@ pub fn check_choise( shop_balance:u64, spisok2:Vec<String>, buy:Vec<String>, pri
         delete_products(buy.clone(), shop_balance, spisok2.clone(), prices.clone(), spisok.clone(), quantitys.clone(), korzina.clone());
     }
     else if ask_choice.trim() == "Псих.помощь" {
-        psih_help();
+        println!("Психолог в отпуске, бывает такое, не огорчайтесь, пожалуйста")
     }
     else if ask_choice.trim() == "Помощь по магазину" {
         shop_help(buy.clone(), shop_balance, spisok2.clone(), prices.clone(), spisok.clone(), quantitys.clone(), korzina.clone());
