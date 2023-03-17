@@ -73,8 +73,7 @@ fn main() {
         let i1 = 1;
         if i1 == 1{
             exit(new_client1, new_admin, new_admin2, new_client2, new_client3, new_client4, new_client5, korzina);
-        }
-    registr(shop_balance, spisok2, buy, prices, spisok, quantitys, korzina.clone());    
+        } 
 }
 pub fn check_choise( shop_balance:u64, spisok2:Vec<String>, buy:Vec<String>, prices:Vec<u64>, spisok:Vec<String>, quantitys:Vec<u64>, korzina:Vec<String>){
     

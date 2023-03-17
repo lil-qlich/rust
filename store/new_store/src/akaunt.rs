@@ -1,8 +1,11 @@
 use crate::{Admin, Client};
 use std::io;
+use std::fs::File;
+use std::io::{Write, BufReader, BufRead, Error};
 use std::{fs::{File, OpenOptions}, io::{Write, stdin, Read}};
 use std::os::windows::prelude::FileExt;
 use crate::check_choise;
+
 pub fn entrance(entrance1:String, admin1: String, admin2:  String, client2: String, client3: String,
 client4: String, client5: String){
 println!("What is your name?");
@@ -133,8 +136,9 @@ pub fn shop_help(buy:Vec<String>, shop_balance:u64, spisok2:Vec<String>, prices:
         return check_choise(shop_balance, spisok2, buy, prices, spisok, quantitys, korzina);
     }
 }
-pub fn registr(buy:Vec<String>, shop_balance:u64, spisok2:Vec<String>, prices:Vec<u64>,spisok:Vec<String>,quantitys:Vec<u64>, korzina:Vec<String>){
-    println!("Приветствуем с уважением в нашем магазине. Пожалуйста, введите ваш логин");
-    let mut users_login = String::new();
-    
+pub fn reg(){
+    println!("Приветсвуем с уважением в нашем магазине! Введите логин вашего аккаунта");
+    let mut new_login = String::new();
+    io::stdin().read_line(&mut new_login);
+    let logins = "account.txt"
 }
